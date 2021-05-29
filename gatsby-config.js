@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://cms-7arow.ondigitalocean.app`,
+        apiURL: `https://cms-k29v3.ondigitalocean.app`,
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [`test`],
         // singleTypes: [`home-page`, `contact`],
