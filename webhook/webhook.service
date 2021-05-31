@@ -1,0 +1,13 @@
+[Unit]
+Description=Gatsby webhook
+After=network.target
+
+[Service]
+Environment=PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Type=simple
+User=ubuntu
+ExecStart=/usr/bin/nodejs /home/ubuntu/gatsby/webhook
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

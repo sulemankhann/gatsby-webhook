@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -32,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://cms-k29v3.ondigitalocean.app`,
+        apiURL: process.env.API_URL,
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [`test`],
         // singleTypes: [`home-page`, `contact`],
