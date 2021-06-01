@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.API_URL,
+        apiURL: 'https://cms-8cppq.ondigitalocean.app'
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [`test`],
         // singleTypes: [`home-page`, `contact`],
