@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: "https://cms-mdb-f3cdq.ondigitalocean.app",
+        apiURL: "http://e94deb014802.ngrok.io",
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [`test`],
         // singleTypes: [`home-page`, `contact`],
