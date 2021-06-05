@@ -8,8 +8,13 @@ import Seo from "../components/seo"
 const IndexPage = ({ data }) => (
   <Layout>
     <Seo title="Home" />
-    <h1>{data.strapiTest.title}</h1>
-    <p>{data.strapiTest.description}</p>
+    {data.allStrapiTest.nodes.map(art => (
+      <li key={`art__${art.id}`}>
+        <h1>{`${art.title}`}</h1>
+        <p>{`${art.description}`}</p>
+        <br></br>
+      </li>
+    ))}
 
     <StaticImage
       src="../images/gatsby-astronaut.png"
@@ -30,9 +35,12 @@ export default IndexPage
 
 export const query = graphql`
   query Test {
-    strapiTest {
-      title
-      description
+    allStrapiTest {
+      nodes {
+        id
+        title
+        description
+      }
     }
   }
 `
