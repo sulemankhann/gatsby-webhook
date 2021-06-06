@@ -1,6 +1,7 @@
 require("dotenv").config({
-  path: `.env`,
+  path: `.env.${process.env.ENABLE_GATSBY_REFRESH_ENDPOINT}`,
 })
+
 
 module.exports = {
   siteMetadata: {
@@ -36,7 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: "http://e94deb014802.ngrok.io",
+        apiURL: "http://localhost:1337",
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [`test`],
         // singleTypes: [`home-page`, `contact`],
