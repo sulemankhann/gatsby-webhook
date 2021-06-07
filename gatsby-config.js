@@ -1,5 +1,5 @@
 require("dotenv").config({
-  path: `.env.${process.env.ENABLE_GATSBY_REFRESH_ENDPOINT}`,
+  path: `.env`,
 })
 
 
@@ -37,7 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: "http://localhost:1337",
+        apiURL: "https://cms-mdb-szs4r.ondigitalocean.app",
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [`test`],
         // singleTypes: [`home-page`, `contact`],
