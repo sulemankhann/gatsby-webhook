@@ -12,7 +12,9 @@ const IndexPage = ({ data }) => (
       <li key={`art__${art.id}`}>
         <h1>{`${art.title}`}</h1>
         <p>{`${art.description}`}</p>
-        <br></br>
+        <br />
+        <hr />
+        <br />
       </li>
     ))}
 
@@ -25,7 +27,7 @@ const IndexPage = ({ data }) => (
       style={{ marginBottom: `1.45rem` }}
     />
     <p>
-      <Link to="/page-2/">Go to page 02</Link> <br />
+      <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </p>
   </Layout>
@@ -34,7 +36,7 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 
 export const query = graphql`
-  query Test {
+  query TestQuery {
     allStrapiTest {
       nodes {
         id
